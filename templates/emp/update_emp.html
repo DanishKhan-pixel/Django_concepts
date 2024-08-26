@@ -25,6 +25,7 @@
                   type="text" 
                   class="form-control" 
                   placeholder="Enter name"
+                  value="{{emp.name}}"
                   
                   >
                 </div>
@@ -36,6 +37,7 @@
                     type="text" 
                     class="form-control" 
                     placeholder="Enter Id"
+                    value="{{emp.emp_id}}"
                     >
                   </div>
                   <div class="mg-3">
@@ -45,7 +47,9 @@
                        id="phone" 
                        type="text" 
                        class="form-control" 
-                       placeholder="Enter phone number">
+                       placeholder="Enter phone number"
+                       value="{{emp.phone}}"
+                      >
                     </div>
                     <div class="mg-3">
                       <label for="address">Employee address</label>
@@ -53,7 +57,10 @@
                       name="emp_address"
                        id="address" 
                        row="5" 
-                       class="form-control"></textarea>
+                       class="form-control"
+                       {% comment %} value="{{emp.address}}" {% endcomment %}
+                       
+                       >{{emp.address}}</textarea>
                         
                       </div>
                       <div class="mg-3" form-check>
@@ -62,7 +69,10 @@
                         name="emp_working" 
                         id = "working" 
                         type="checkbox"
-                         class="form-check-input">
+                         class="form-check-input"
+                         value="{{emp.working}}"
+                         
+                         >
                           
                         </div>
                         <div class="mg-3">
@@ -71,6 +81,7 @@
                            name="emp_department"
                             id="department"
                              class="form-control"
+                             value="{{emp.department}}"
                             
                              >
                             <option value="CSE">Computer science</option>
@@ -79,8 +90,8 @@
                           </select>
                           </div>
                           <div class="containar text-center my-3">
-                            <button class="btn btn-primary">
-                              Add Employee
+                            <button class="btn btn-sucess">
+                              update Employee
                             </button>
                           </div>
               </form>
