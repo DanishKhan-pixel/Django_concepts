@@ -32,7 +32,6 @@ def add_emp(request):
             e.working=False
         else:
             e.working=True
-
         # save the object
         e.save()
         return redirect("/emp/home/")
@@ -73,7 +72,11 @@ def do_update_emp(request,emp_id):
             e.working=False
         else:
             e.working=True
-
         e.save()
 
     return redirect("/emp/home/")
+
+
+
+def testimonials(request):
+    return HttpResponse("working")
