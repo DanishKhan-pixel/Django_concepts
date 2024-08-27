@@ -51,3 +51,29 @@ def update_emp(request,emp_id):
          'emp':emp
      })
      
+
+def do_update_emp(request,emp_id):
+    if request.method=="POST":
+        # data fetch
+        emp_name=request.POST.get("emp_name")
+        emp_id_temp=request.POST.get("emp_id")
+        emp_phone=request.POST.get("emp_phone")
+        emp_address=request.POST.get("emp_address")
+        emp_working=request.POST.get("emp_working")
+        emp_department=request.POST.get("emp_department")
+        
+        e=Emp.objects.get(pk=emp_id)
+        e.name=emp_name
+        e.emp_id=emp_id_temp
+        e.phone=emp_phone
+        e.address=emp_phone
+        e.working=emp_working
+        e.department=emp_department
+        if emp_working is None:
+            e.working=False
+        else:
+            e.working=True
+
+        e.save()
+
+    return redirect("/emp/home/")

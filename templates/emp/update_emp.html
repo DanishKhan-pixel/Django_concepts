@@ -15,7 +15,7 @@
           <div class="card bg-primary">
             
             <div class="card-body">
-              <form action="/emp/add-emp/" method="POST">
+              <form action="/emp/do-update-emp/{{emp.id}}" method="POST">
                 {% csrf_token %} 
                 <div class="mg-3">
                 <label for="name">Employee Name</label>
@@ -66,11 +66,12 @@
                       <div class="mg-3" form-check>
                         <label for="working">Working</label>
                         <input 
+                        {%if emp.working%} checked {% endif%}
                         name="emp_working" 
                         id = "working" 
                         type="checkbox"
                          class="form-check-input"
-                         value="{{emp.working}}"
+                      
                          
                          >
                           
