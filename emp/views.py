@@ -35,10 +35,6 @@ def add_emp(request):
 
         # save the object
         e.save()
-            
-
-
-
         return redirect("/emp/home/")
     return render(request,'emp/add_emp.html',{})
 
