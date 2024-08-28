@@ -12,8 +12,6 @@ class Emp(models.Model):
 
     def __str__(self):
         return self.name
-    
-
 
 class Testimonial(models.Model):
     name=models.CharField( max_length=50)

@@ -79,4 +79,5 @@ def do_update_emp(request,emp_id):
 
 
 def testimonials(request):
-    return HttpResponse("working")
+    return render(request,"emp/testimonials.html")
+    # return HttpResponse("working")
