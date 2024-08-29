@@ -1,6 +1,7 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from .models import *
+from .form import FeedbackFrom
 # Create your views here.
 def emp_home(request):
     emps=Emp.objects.all()
@@ -86,7 +87,12 @@ def testimonials(request):
     # return HttpResponse("working")
 
 def Feedback(request):
-    return render(request, "emp/feedback.html", {} )
+    if request.method =="POST":
+        pass
+    else:
+        form=FeedbackFrom()
+
+        return render(request, "emp/feedback.html", {'form':form } )
         # return HttpResponse("working")
 
 
