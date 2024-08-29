@@ -84,3 +84,9 @@ def testimonials(request):
         'testi':testi
     })
     # return HttpResponse("working")
+
+def Feedback(request):
+    return render(request, "emp/feedback.html", {} )
+        # return HttpResponse("working")
+
+
