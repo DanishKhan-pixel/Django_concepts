@@ -88,7 +88,13 @@ def testimonials(request):
 
 def Feedback(request):
     if request.method =="POST":
-        pass
+        form=FeedbackFrom(request.POST)
+        if form.is_valid():
+            print(form.cleaned_data['email'])
+            print(form.cleaned_data['name'])
+            print(form.cleaned_data['feedback'])
+            print("data savad")
+    
     else:
         form=FeedbackFrom()
 

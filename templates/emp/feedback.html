@@ -17,19 +17,10 @@
               <h4 class="mb-0">Feedback Form</h4>
             </div>
             <div class="card-body">
-              <form action="">
-                <div class="mb-3">
-                  <label for="name" class="form-label">Name</label>
-                  <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
-                </div>
-                <div class="mb-3">
-                  <label for="email" class="form-label">Email address</label>
-                  <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
-                </div>
-                <div class="mb-3">
-                  <label for="feedback" class="form-label">Your Feedback</label>
-                  <textarea class="form-control" id="feedback" rows="4" placeholder="Write your feedback here..." required></textarea>
-                </div>
+              <form action="/emp/feedback/" method="POST">
+                
+                {% csrf_token %}
+                {{form.as_p}}
                 <div class="d-grid mt-4">
                   <button type="submit" class="btn btn-success">Submit Feedback</button>
                 </div>
