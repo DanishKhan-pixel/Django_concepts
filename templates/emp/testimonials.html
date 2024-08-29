@@ -28,15 +28,18 @@
 
                 </thead>
                 <tbody>
-                 {%for t in testi %}
+                 {% for t in testi %}
                   <tr>
                     <td>{{forloop.counter}}</td>
 
                     <td>
-                        {{t.name}}</td>
+                      
+                      <img style="max-width: 200px;" src="/media/{{t.picture}}" alt="">
+                      {{t.name}}
+                    </td>
                     <td>
-                        <img src="/media/{{t.picture}}" alt="">
                         {{t.testimonial}}</td>
+
                     <td>{{t.rating}}</td>
                     
                    
