@@ -94,7 +94,8 @@ def Feedback(request):
             print(form.cleaned_data['name'])
             print(form.cleaned_data['feedback'])
             print("data savad")
-    
+
+
     else:
         form=FeedbackFrom()
 
